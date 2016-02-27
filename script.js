@@ -20,8 +20,11 @@ $(document).ready(function(){
             
             $(document).on("keypress", function(e){
                 var letterCode = e.which;
-                $("#words-typed").text(String.fromCharCode(letterCode)); // now I need to make this a sentence with glyphs
-                $("#next-letter").text(String.fromCharCode(letterCode)); //I think this is the highlighted letter pressed key
+                var letter = (String.fromCharCode(letterCode));
+                    console.log(letter);
+                $("#words-typed").append(letter);
+                $("#next-letter").text(letter);
+                
                 // console.log(test);
                 // $("next-letter").text($(this).text());
             });

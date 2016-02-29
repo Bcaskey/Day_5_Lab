@@ -30,6 +30,10 @@
   padding: 10px 0;
 }
 
+.keyPressed {
+    background-color: #B2B8F7;
+}
+
 #words-typed {
   font-size: 20px;
 }
@@ -40,4 +44,3 @@
 .glyphicon-remove {
   color : #CD2626
 }
-

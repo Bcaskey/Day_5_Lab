@@ -3,27 +3,45 @@ $(document).ready(function(){
 
     // below working thru array by line
     // working on going through a loop on top of a loop
+
     var sentences = [
-        "text 1 ", //"ten ate neite ate nee enet ite ate inet ent eate", 
-        "text 2 ", //"Too ato too nOt enot one totA not anot tOO aNot",
-        "text 3 ", //"oat itain oat tain nate eate tea anne inant nean",
-        "text 4 ", //"itant eate anot eat nato inate eat anot tain eat",
-        "text 5 " //"nee ene ate ite tent tiet ent ine ene ete ene ate"
+        "first ", //"ten ate neite ate nee enet ite ate inet ent eate", 
+        "second ", //"Too ato too nOt enot one totA not anot tOO aNot",
+        "third ", //"oat itain oat tain nate eate tea anne inant nean",
+        "fourth ", //"itant eate anot eat nato inate eat anot tain eat",
+        "last " //"nee ene ate ite tent tiet ent ine ene ete ene ate"
         ];
-    $('#words').append(sentences);
-    $.each(sentences, function( index, value ) {
-        $('#words' + value).text( index + ": " + value ); // replaced alert writes everything, dropped append
-        });
+    var letterCount = 0; //setting at zero before keyUp or keyPress
+    var currentLetter;    
+    var line1 = sentences[0];
+    var line2 = sentences[1];
+    var line3 = sentences[2];
+    var line4 = sentences[3];        
+    var line5 = sentences[4];
+    
+    var line1cnt = line1.split('');
+    var line2cnt = line2.split('');
+    var line3cnt = line3.split('');
+    var line4cnt = line4.split('');
+    var line5cnt = line5.split('');
+        
+    $('#words').append(sentences[0]);
+    
     // above working thru array by line
     $('#keyboard-upper-container').hide();
     
     $(document).on('keypress', function(e){
-        var KeyCodePress = e.which;
-        var letter = (String.fromCharCode(KeyCodePress));
+        var keyCodePress = e.which;
+        var letter = (String.fromCharCode(keyCodePress));
         $('#words-typed').append(letter);
         $('#next-letter').text(letter);
-        $('#' + letter).addClass('keyPressed');
-        console.log(letter);
+            //these are regular char
+            if ((keyCodePress >=0) && (keyCodePress < 32) || (keyCodePress > 47) && (keyCodePress < 58) || (keyCodePress > 64) && (keyCodePress < 91) || (keyCodePress > 96) && (keyCodePress < 123)) {
+                $('#' + letter).addClass('keyPressed');
+            //these are for spec char
+            } else {
+                $('#' + keyCodePress).addClass('keyPressed');
+            }
     });
     // When shift key is down, show the upper case keyboard
     $(document).keydown(function(e){ //keydown understands the key, but not the optional values of the key shift/noshift
@@ -35,7 +53,6 @@ $(document).ready(function(){
     // when shift key is up, go back to lower case keyboard
     $(document).keyup(function (e){
         var keyCodeUp = e.which;
-        //console.log('test222: ' + keyCodeUp);
         $('*').removeClass('keyPressed');
             if (e.which == 16) {
                 $("#keyboard-lower-container").show();
@@ -45,3 +62,4 @@ $(document).ready(function(){
 // end of original script tag below
 });   
      
+

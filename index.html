@@ -9,16 +9,26 @@
 	<body>
 		<div class='container' id='target'>
 			<div class='row col-md-12' id='word-container'>
-				<div class='row col-xs-12' id='block'>block</div> <!-- yellow block at top of page -->				
-				<div class='row col-lg-12' id='words'></div>
-                <div class='row col-lg-12' id='charCountBox'></div>
+				<div class='row col-xs-12' id='block'></div> <!-- yellow block at top of page, highlight color for typing -->
+                <div class='row col-lg-12' id='words'></div>
+                <div class='BlockBC col-xs-12'><span class="glyphicon glyphicon-ok"></span></div>
 				<div class='row col-lg-12 text-center' id='words-typed'></div>
 				<div class='row col-lg-12 text-center' id='next-letter'></div>
 			</div>
 			
-            
-            <div class='text-center keyboard-container' id='keyboard-upper-container'>
-				<div class='row col-lg-12 keys-row'>
+
+                
+                <!--  In Bootstrap, the Well gives they key look, well-lg just makes the 
+                well look taller, bigger, could also be well-sm, key should be the font sytle  -->
+                
+                <!-- 
+                <h3><i class="glyphicon glyphicon-user"></i> About Us</h3>    
+                <span class="glyphicon glyphicon-ok"></span>
+
+                -->
+                            
+            <div class='text-center keyboard-container' id='keyboard-upper-container'>                
+                <div class='row col-lg-12 keys-row'>
 					<span class='well well-lg key' id='126'>~</span>
 					<span class='well well-lg key' id='33'>!</span>
 					<span class='well well-lg key' id='64'>@</span>

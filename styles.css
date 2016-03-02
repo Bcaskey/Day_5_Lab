@@ -10,11 +10,26 @@
 }
 
 #block {
-  position: absolute;
-  margin-top: 10px;
-  width: 15px;
-  height: 15px;
+  /* position: absolute; */
+  margin-top: 9px;
+  width: 13px;
+  height: 17px;
   background-color: yellow;
+  display:inline-block;
+}
+
+.blockBC {
+    background-color: pink;
+    width: 13;
+    height: 17px;
+}
+
+#blockRed { /* right now not used*/
+  position: absolute;
+  margin-top: 9px;
+  width: 13px;
+  height: 17px;
+  background-color: red;
 }
 
 .keyboard-container {
@@ -38,9 +53,11 @@
   font-size: 20px;
 }
 .glyphicon-ok {
-  color: #1DA237
+  color: #1DA237;
+  font-size: 10px;
 }
 
 .glyphicon-remove {
-  color : #CD2626
+  color : #CD2626;
+  font-size: 10px;
 }

@@ -10,26 +10,12 @@
 }
 
 #block {
-  /* position: absolute; */
-  margin-top: 9px;
-  width: 13px;
-  height: 17px;
-  background-color: yellow;
-  display:inline-block;
-}
-
-.blockBC {
-    background-color: pink;
-    width: 13;
-    height: 17px;
-}
-
-#blockRed { /* right now not used*/
   position: absolute;
   margin-top: 9px;
   width: 13px;
   height: 17px;
-  background-color: red;
+  background-color: #ffba00;
+  display:inline-block;
 }
 
 .keyboard-container {
